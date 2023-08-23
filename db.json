@@ -1,0 +1,19 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Super Man",
+      "altName": "Damn Super"
+    },
+    {
+      "id": 2,
+      "name": "Iron Man",
+      "altName": "Damn Iron"
+    },
+    {
+      "id": 3,
+      "name": "Power Man",
+      "altName": "Damn Power"
+    }
+  ]
+}
