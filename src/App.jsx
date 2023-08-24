@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
+import { QueryClient, QueryClientProvider } from "react-query";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import RQHeroes from './components/RQHeroes';
@@ -20,11 +21,13 @@ const router = createBrowserRouter([
   }
 ]);
 
-
+const queryClient = new QueryClient();
 const App = () => {
   return (
     <div>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </div>
   )
 }
