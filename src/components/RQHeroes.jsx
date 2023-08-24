@@ -5,16 +5,19 @@ import { useQuery } from 'react-query'
 import NavBar from './Navbar'
 
 const fetchRQHeroes = () => {
-  return axios.get("http://localhost:8080/superheroes");
+  return axios.get("http://localhost:8080/superheroes2");
 }
 
 const RQHeroes = () => {
-  const {isLoading, isSuccess, data} = useQuery('superheroes', fetchRQHeroes)
-
+  const {isLoading, isSuccess, data, isError, error} = useQuery('superheroes', fetchRQHeroes)
 
   let content = null;
   if(isLoading) {
     content = <div>Loading.....</div>
+  }
+
+  if(isError) {
+    content = <div>{error.message}</div>
   }
 
   if(isSuccess) {
