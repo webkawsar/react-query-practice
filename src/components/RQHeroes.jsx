@@ -9,11 +9,14 @@ const fetchRQHeroes = () => {
 }
 
 const RQHeroes = () => {
-  const {isLoading, isSuccess, data, isError, error} = useQuery('superheroes', fetchRQHeroes)
+  const {isLoading, isSuccess, data, isError, error} = useQuery('superheroes', fetchRQHeroes, {
+    cacheTime: 5000,
+    staleTime: 10000
+  })
 
   let content = null;
   if(isLoading) {
-    content = <div>Loading.....</div>
+    content = <h2>Loading.....</h2>
   }
 
   if(isError) {

@@ -15,7 +15,7 @@ const SuperHeroes = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading.....</div>;
+    return <h2>Loading.....</h2>;
   }
 
   return (
