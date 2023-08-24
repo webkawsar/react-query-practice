@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
 import RQHeroes from './components/RQHeroes';
@@ -27,6 +28,7 @@ const App = () => {
     <div>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
       </QueryClientProvider>
     </div>
   )

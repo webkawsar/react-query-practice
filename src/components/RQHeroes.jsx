@@ -5,7 +5,7 @@ import { useQuery } from 'react-query'
 import NavBar from './Navbar'
 
 const fetchRQHeroes = () => {
-  return axios.get("http://localhost:8080/superheroes2");
+  return axios.get("http://localhost:8080/superheroes");
 }
 
 const RQHeroes = () => {
